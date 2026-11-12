@@ -1,0 +1,7 @@
+{
+  "type":"FeatureCollection",
+  "features":[
+    {"type":"Feature","properties":{"province":3,"district":"Kathmandu","locallevel_name":"Kathmandu","locallevel_name_nepali":"काठमाडौं महानगरपालिका","locallevel_type":"Mahanagarpalika"},"geometry":{"type":"Polygon","coordinates":[[[85.20,27.60],[85.45,27.60],[85.45,27.85],[85.20,27.85],[85.20,27.60]]]}},
+    {"type":"Feature","properties":{"province":3,"district":"Chitwan","locallevel_name":"Bharatpur","locallevel_name_nepali":"भरतपुर महानगरपालिका","locallevel_type":"Mahanagarpalika"},"geometry":{"type":"Polygon","coordinates":[[[84.15,27.40],[84.55,27.40],[84.55,27.75],[84.15,27.75],[84.15,27.40]]]}}
+  ]
+}

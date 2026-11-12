@@ -1,0 +1,65 @@
+name: Nepal FireWatch Update
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: "7,37 * * * *"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "nepal-firewatch"
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Nepal FireWatch
+        env:
+          FIRMS_MAP_KEY: ${{ secrets.FIRMS_MAP_KEY }}
+        run: python run.py
+
+      - name: Commit updated fire data
+        run: |
+          git config user.name "nepal-firewatch-bot"
+          git config user.email "actions@users.noreply.github.com"
+
+          git add data/firewatch.sqlite docs/data docs/cards
+
+          git diff --cached --quiet || git commit -m "Update Nepal fire detections"
+
+          git push
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: docs
+
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4
