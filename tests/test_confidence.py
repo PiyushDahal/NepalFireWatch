@@ -34,14 +34,47 @@ def test_single_nominal_10mw_remains_anomaly():
     ])
     assert result["evidence_score"] == 0
     assert result["confidence_class"] == "anomaly"
+    assert result["overpass_count"] == 1
 
 
-def test_two_detections_become_probable():
+def test_two_pixels_same_overpass_remain_anomaly():
     result = classify_event([
         det("a", "2026-11-13T10:00:00+00:00"),
-        det("b", "2026-11-13T10:15:00+00:00"),
+        det("b", "2026-11-13T10:00:00+00:00"),
     ])
-    assert result["evidence_score"] == 2
+    assert result["overpass_count"] == 1
+    assert result["evidence_score"] == 0
+    assert result["confidence_class"] == "anomaly"
+
+
+def test_three_pixels_same_overpass_get_only_spatial_support():
+    result = classify_event([
+        det("a", "2026-11-13T10:00:00+00:00"),
+        det("b", "2026-11-13T10:00:00+00:00"),
+        det("c", "2026-11-13T10:01:00+00:00"),
+    ])
+    assert result["overpass_count"] == 1
+    assert result["evidence_score"] == 1
+    assert result["confidence_class"] == "anomaly"
+
+
+def test_two_independent_overpasses_become_probable():
+    result = classify_event([
+        det("a", "2026-11-13T10:00:00+00:00"),
+        det("b", "2026-11-13T12:00:00+00:00"),
+    ])
+    assert result["overpass_count"] == 2
+    assert result["evidence_score"] >= 2
+    assert result["confidence_class"] == "probable"
+
+
+def test_two_satellites_same_time_are_independent_corroboration():
+    result = classify_event([
+        det("a", "2026-11-13T10:00:00+00:00", satellite="N20"),
+        det("b", "2026-11-13T10:00:00+00:00", satellite="N21"),
+    ])
+    assert result["overpass_count"] == 2
+    assert result["satellite_count"] == 2
     assert result["confidence_class"] == "probable"
 
 
@@ -55,6 +88,7 @@ def test_strong_persistent_multisat_event_is_high():
     assert result["evidence_score"] >= 4
     assert result["confidence_class"] == "high"
     assert result["satellite_count"] == 2
+    assert result["overpass_count"] == 4
     assert result["duration_hours"] == 7.0
 
 
@@ -104,7 +138,6 @@ def test_existing_v01_database_is_migrated_in_place():
         """)
         con.commit()
         con.close()
-
         migrated = db.connect(path)
         try:
             cols = {r[1] for r in migrated.execute("PRAGMA table_info(events)")}
@@ -112,6 +145,7 @@ def test_existing_v01_database_is_migrated_in_place():
             assert "confidence_class" in cols
             assert "confidence_label" in cols
             assert "satellite_count" in cols
+            assert "overpass_count" in cols
             assert "duration_hours" in cols
             assert "confidence_reasons" in cols
         finally:

@@ -28,6 +28,7 @@ CREATE TABLE IF NOT EXISTS events (
     confidence_class TEXT NOT NULL DEFAULT 'anomaly',
     confidence_label TEXT NOT NULL DEFAULT 'Satellite thermal anomaly',
     satellite_count INTEGER NOT NULL DEFAULT 0,
+    overpass_count INTEGER NOT NULL DEFAULT 0,
     duration_hours REAL NOT NULL DEFAULT 0.0,
     confidence_reasons TEXT NOT NULL DEFAULT '[]'
 );
@@ -71,6 +72,7 @@ EVENT_CONFIDENCE_COLUMNS = {
     "confidence_class": "TEXT NOT NULL DEFAULT 'anomaly'",
     "confidence_label": "TEXT NOT NULL DEFAULT 'Satellite thermal anomaly'",
     "satellite_count": "INTEGER NOT NULL DEFAULT 0",
+    "overpass_count": "INTEGER NOT NULL DEFAULT 0",
     "duration_hours": "REAL NOT NULL DEFAULT 0.0",
     "confidence_reasons": "TEXT NOT NULL DEFAULT '[]'",
 }
@@ -107,7 +109,7 @@ def _update_event_confidence(con: sqlite3.Connection, event_id: str) -> None:
         """
         UPDATE events
         SET evidence_score=?, confidence_class=?, confidence_label=?,
-            satellite_count=?, duration_hours=?, confidence_reasons=?
+            satellite_count=?, overpass_count=?, duration_hours=?, confidence_reasons=?
         WHERE event_id=?
         """,
         (
@@ -115,6 +117,7 @@ def _update_event_confidence(con: sqlite3.Connection, event_id: str) -> None:
             result["confidence_class"],
             result["confidence_label"],
             result["satellite_count"],
+            result["overpass_count"],
             result["duration_hours"],
             json.dumps(result["confidence_reasons"], ensure_ascii=False),
             event_id,
