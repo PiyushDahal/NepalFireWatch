@@ -36,6 +36,9 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Run tests
+        run: pytest -q
+
       - name: Run Nepal FireWatch
         env:
           FIRMS_MAP_KEY: ${{ secrets.FIRMS_MAP_KEY }}

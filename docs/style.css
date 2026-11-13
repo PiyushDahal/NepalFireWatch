@@ -1,1 +1,44 @@
-html,body{margin:0;height:100%;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#11151a;color:#f5f7fa}header{height:64px;box-sizing:border-box;padding:10px 18px;background:#1b2026;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #343b44}header b{font-size:22px}header span{display:block;color:#aeb7c2;font-size:12px;margin-top:2px}#status{font-size:13px;color:#f0a14b}main{display:grid;grid-template-columns:1fr 340px;height:calc(100% - 64px)}#map{height:100%}aside{overflow:auto;padding:16px;background:#171b20;border-left:1px solid #343b44}aside h2{margin-top:0}.event{background:#222830;border:1px solid #353d47;border-radius:12px;padding:12px;margin:10px 0}.event b{display:block}.event small{color:#aeb7c2}.event a{color:#ff9f43;text-decoration:none}.disclaimer{font-size:12px;color:#aeb7c2;line-height:1.4}@media(max-width:800px){main{grid-template-columns:1fr;grid-template-rows:60vh auto}aside{border-left:0;border-top:1px solid #343b44}}
+html,body{
+  margin:0;
+  height:100%;
+  font-family:system-ui,-apple-system,Segoe UI,sans-serif;
+  background:#11151a;
+  color:#f5f7fa
+}
+header{
+  min-height:72px;
+  box-sizing:border-box;
+  padding:10px 18px;
+  background:#1b2026;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  border-bottom:1px solid #343b44
+}
+.brand b{font-size:22px}
+.brand span{display:block;color:#aeb7c2;font-size:12px;margin-top:2px}
+.header-status{text-align:right;font-size:12px;line-height:1.45}
+#status{color:#aeb7c2}
+#last-check{color:#aeb7c2}
+.health{font-weight:700;font-size:13px}
+.health-ok{color:#56d364}
+.health-delay{color:#f0a14b}
+.health-stale{color:#ff6b6b}
+.health-unknown{color:#aeb7c2}
+main{display:grid;grid-template-columns:1fr 340px;height:calc(100% - 72px)}
+#map{height:100%}
+aside{overflow:auto;padding:16px;background:#171b20;border-left:1px solid #343b44}
+aside h2{margin-top:0}
+.event{background:#222830;border:1px solid #353d47;border-radius:12px;padding:12px;margin:10px 0}
+.event b{display:block}
+.event small{color:#aeb7c2}
+.event a{color:#ff9f43;text-decoration:none}
+.disclaimer{font-size:12px;color:#aeb7c2;line-height:1.4}
+@media(max-width:800px){
+  header{align-items:flex-start;flex-direction:column}
+  .header-status{text-align:left}
+  main{grid-template-columns:1fr;grid-template-rows:60vh auto;height:auto}
+  #map{min-height:60vh}
+  aside{border-left:0;border-top:1px solid #343b44}
+}

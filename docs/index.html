@@ -9,8 +9,30 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header><div><b>🔥 Nepal FireWatch</b><span>Satellite thermal-anomaly monitoring</span></div><div id="status">Loading…</div></header>
-<main><div id="map"></div><aside><h2>Recent events</h2><div id="events"></div><p class="disclaimer">NASA FIRMS detections are satellite thermal anomalies, not ground-confirmed wildfires.</p></aside></main>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="app.js"></script>
-</body></html>
+  <header>
+    <div class="brand">
+      <b>🔥 Nepal FireWatch</b>
+      <span>Satellite thermal-anomaly monitoring</span>
+    </div>
+    <div class="header-status">
+      <div id="health" class="health health-unknown">⚪ Checking system status…</div>
+      <div id="last-check">Last satellite check: checking…</div>
+      <div id="status">Loading map data…</div>
+    </div>
+  </header>
+
+  <main>
+    <div id="map"></div>
+    <aside>
+      <h2>Recent events</h2>
+      <div id="events"></div>
+      <p class="disclaimer">
+        NASA FIRMS detections are satellite thermal anomalies, not ground-confirmed wildfires.
+      </p>
+    </aside>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
