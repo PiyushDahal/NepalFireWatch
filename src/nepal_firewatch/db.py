@@ -22,6 +22,10 @@ CREATE TABLE IF NOT EXISTS events (
     district TEXT,
     local_name TEXT,
     local_type TEXT,
+    ward_no TEXT,
+    ward_name TEXT,
+    ward_id TEXT,
+    ward_source TEXT,
     status TEXT NOT NULL DEFAULT 'active',
     card_path TEXT,
     evidence_score INTEGER NOT NULL DEFAULT 0,
@@ -78,6 +82,13 @@ EVENT_CONFIDENCE_COLUMNS = {
 }
 
 
+EVENT_WARD_COLUMNS = {
+    "ward_no": "TEXT",
+    "ward_name": "TEXT",
+    "ward_id": "TEXT",
+    "ward_source": "TEXT",
+}
+
 def _event_columns(con: sqlite3.Connection) -> set[str]:
     return {row[1] for row in con.execute("PRAGMA table_info(events)").fetchall()}
 
@@ -92,6 +103,15 @@ def _migrate_event_confidence_columns(con: sqlite3.Connection) -> bool:
             changed = True
     return changed
 
+
+def _migrate_event_ward_columns(con: sqlite3.Connection) -> bool:
+    existing = _event_columns(con)
+    changed = False
+    for name, sql_type in EVENT_WARD_COLUMNS.items():
+        if name not in existing:
+            con.execute(f"ALTER TABLE events ADD COLUMN {name} {sql_type}")
+            changed = True
+    return changed
 
 def _event_detections(con: sqlite3.Connection, event_id: str) -> list[dict]:
     return [
@@ -138,6 +158,7 @@ def connect(path: Path) -> sqlite3.Connection:
     con.executescript(SCHEMA)
 
     migrated = _migrate_event_confidence_columns(con)
+    _migrate_event_ward_columns(con)
     if migrated:
         # One-time classification of all events already stored in the v0.1 database.
         _backfill_confidence(con)
@@ -226,6 +247,20 @@ def refresh_event(con, event_id: str) -> None:
     )
     _update_event_confidence(con, event_id)
 
+
+def set_event_ward(con, event_id: str, ward: dict | None) -> None:
+    if not ward:
+        return
+    con.execute(
+        "UPDATE events SET ward_no=?, ward_name=?, ward_id=?, ward_source=? WHERE event_id=?",
+        (
+            ward.get("ward_no"),
+            ward.get("ward_name") or "",
+            ward.get("ward_id") or "",
+            ward.get("ward_source") or "BIPAD",
+            event_id,
+        ),
+    )
 
 def set_card_path(con, event_id: str, card_path: str) -> None:
     con.execute(

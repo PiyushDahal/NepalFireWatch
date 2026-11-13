@@ -17,8 +17,8 @@ class Settings:
     cluster_hours: float = float(os.getenv("NFW_CLUSTER_HOURS", "12"))
     min_confidence: str = os.getenv("NFW_MIN_CONFIDENCE", "nominal").lower()
     db_path: Path = ROOT / os.getenv("NFW_DB_PATH", "data/firewatch.sqlite")
-    boundary_path: Path = ROOT / "data/cache/nepal_local_levels.geojson"
-    boundary_url: str = "https://raw.githubusercontent.com/younginnovations/nepal-locallevel-map/master/out/municipalities.simplified.geojson"
+    boundary_path: Path = ROOT / "data/cache/nepal_local_levels_oknp.geojson"
+    boundary_url: str = "https://raw.githubusercontent.com/openknowledgenp/localboundaries/gh-pages/public/data/local-level/nepal.geojson"
     docs_dir: Path = ROOT / "docs"
     cards_dir: Path = ROOT / "docs/cards"
     map_data_dir: Path = ROOT / "docs/data"

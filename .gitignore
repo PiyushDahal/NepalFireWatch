@@ -5,3 +5,4 @@ __pycache__/
 *.pyc
 .DS_Store
 data/firewatch_demo.sqlite
+data/cache/bipad_ward_lookup.json
