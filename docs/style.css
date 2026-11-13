@@ -42,3 +42,42 @@ aside h2{margin-top:0}
   #map{min-height:60vh}
   aside{border-left:0;border-top:1px solid #343b44}
 }
+
+
+/* Checkpoint 2: transparent event-evidence classification */
+.confidence-badge{
+  display:inline-block;
+  margin:6px 0;
+  padding:3px 8px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.01em;
+}
+.confidence-anomaly{background:#4b411a;color:#ffe28a;border:1px solid #806d25}
+.confidence-probable{background:#4a2e13;color:#ffc778;border:1px solid #8b5724}
+.confidence-high{background:#4b1f22;color:#ff9b9b;border:1px solid #8f3438}
+.event-anomaly{border-left:4px solid #f2cc60}
+.event-probable{border-left:4px solid #f0a14b}
+.event-high{border-left:4px solid #ff5d5d}
+.confidence-legend{
+  background:rgba(27,32,38,.95);
+  color:#f5f7fa;
+  border:1px solid #48515d;
+  border-radius:10px;
+  padding:9px 11px;
+  font-size:11px;
+  line-height:1.65;
+  box-shadow:0 1px 5px rgba(0,0,0,.35);
+}
+.confidence-legend b{display:block;margin-bottom:3px}
+.legend-dot{
+  display:inline-block;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  margin-right:6px;
+}
+.legend-anomaly{background:#f2cc60}
+.legend-probable{background:#f0a14b}
+.legend-high{background:#ff5d5d}

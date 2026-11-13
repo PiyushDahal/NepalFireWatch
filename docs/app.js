@@ -56,6 +56,44 @@ function renderHealth(h) {
   last.textContent = `Last satellite check: ${formatNpt(h.last_run_utc)}`;
 }
 
+function eventVisual(p) {
+  const cls = p.confidence_class || 'anomaly';
+  if (cls === 'high') {
+    return {
+      cls: 'high',
+      color: '#ff5d5d',
+      fill: '#c93636',
+      label: p.confidence_label || 'High-evidence persistent thermal event'
+    };
+  }
+  if (cls === 'probable') {
+    return {
+      cls: 'probable',
+      color: '#ffb454',
+      fill: '#e88724',
+      label: p.confidence_label || 'Probable fire signal'
+    };
+  }
+  return {
+    cls: 'anomaly',
+    color: '#f2cc60',
+    fill: '#c9a227',
+    label: p.confidence_label || 'Satellite thermal anomaly'
+  };
+}
+
+const legend = L.control({position: 'bottomright'});
+legend.onAdd = function() {
+  const div = L.DomUtil.create('div', 'confidence-legend');
+  div.innerHTML =
+    '<b>Event evidence</b>' +
+    '<div><span class="legend-dot legend-anomaly"></span>Satellite thermal anomaly</div>' +
+    '<div><span class="legend-dot legend-probable"></span>Probable fire signal</div>' +
+    '<div><span class="legend-dot legend-high"></span>High-evidence persistent thermal event</div>';
+  return div;
+};
+legend.addTo(map);
+
 async function load() {
   const bust = Date.now();
   const [er, sr] = await Promise.all([
@@ -88,11 +126,12 @@ async function load() {
   e.features.forEach(f => {
     const p = f.properties;
     const [lon, lat] = f.geometry.coordinates;
+    const vis = eventVisual(p);
 
     const marker = L.circleMarker([lat, lon], {
       radius: 8,
-      color: '#ff9f43',
-      fillColor: '#e8433e',
+      color: vis.color,
+      fillColor: vis.fill,
       fillOpacity: .9,
       weight: 2
     }).addTo(map);
@@ -101,19 +140,30 @@ async function load() {
       .filter(Boolean)
       .join(', ');
 
+    const score = p.evidence_score ?? 0;
+    const satellites = p.satellite_count ?? 0;
+    const duration = Number(p.duration_hours ?? 0).toFixed(1);
+
     marker.bindPopup(
-      `<b>${esc(p.event_id)}</b><br>${esc(loc)}<br>` +
+      `<b>${esc(p.event_id)}</b><br>` +
+      `<span class="confidence-badge confidence-${esc(vis.cls)}">${esc(vis.label)}</span><br>` +
+      `${esc(loc)}<br>` +
+      `Evidence score: ${esc(score)}<br>` +
       `Detections: ${esc(p.detection_count)}<br>` +
+      `Satellites: ${esc(satellites)}<br>` +
+      `Duration: ${esc(duration)} h<br>` +
       `Max FRP: ${esc(p.max_frp ?? '—')} MW` +
       `${p.card_path ? `<br><a href="${esc(p.card_path)}" target="_blank">Alert card</a>` : ''}`
     );
 
     const div = document.createElement('div');
-    div.className = 'event';
+    div.className = `event event-${vis.cls}`;
     div.innerHTML =
       `<b>${esc(p.event_id)}</b>` +
+      `<span class="confidence-badge confidence-${esc(vis.cls)}">${esc(vis.label)}</span>` +
       `<small>${esc(loc)}</small><br>` +
-      `<small>${esc(p.last_seen_utc)}</small><br>` +
+      `<small>${esc(formatNpt(p.last_seen_utc))}</small><br>` +
+      `<small>Evidence ${esc(score)} • ${esc(p.detection_count)} detections • ${esc(satellites)} satellite(s)</small><br>` +
       `${p.card_path ? `<a href="${esc(p.card_path)}" target="_blank">Open alert card</a>` : ''}`;
     box.appendChild(div);
   });
