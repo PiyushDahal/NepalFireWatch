@@ -6,6 +6,35 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          85.49171,
+          26.89942
+        ]
+      },
+      "properties": {
+        "detection_id": "30dc3bad084f90cce4b23b3ae08c58d4a1f8e360",
+        "event_id": "NFW-20261113-011",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-13T19:32:00+00:00",
+        "observed_npt": "2026-11-14T01:17:00+05:45",
+        "confidence": "nominal",
+        "frp": 0.33,
+        "daynight": "N",
+        "bright_ti4": 300.34,
+        "bright_ti5": 287.89,
+        "province": "Madhesh",
+        "district": "Sarlahi",
+        "local_name": "Chakraghatta",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-13T22:08:35+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           83.30825,
           27.41146
         ]

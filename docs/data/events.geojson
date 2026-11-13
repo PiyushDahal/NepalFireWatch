@@ -6,6 +6,29 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          85.49171,
+          26.89942
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261113-011",
+        "first_seen_utc": "2026-11-13T19:32:00+00:00",
+        "last_seen_utc": "2026-11-13T19:32:00+00:00",
+        "max_frp": 0.33,
+        "detection_count": 1,
+        "province": "Madhesh",
+        "district": "Sarlahi",
+        "local_name": "Chakraghatta",
+        "local_type": "Gaunpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261113-011.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           81.18146,
           28.48203
         ]
