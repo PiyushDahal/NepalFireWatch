@@ -6,6 +6,236 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          81.18146,
+          28.48203
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261113-010",
+        "first_seen_utc": "2026-11-13T07:50:00+00:00",
+        "last_seen_utc": "2026-11-13T07:50:00+00:00",
+        "max_frp": 2.93,
+        "detection_count": 1,
+        "province": "Lumbini",
+        "district": "Bardiya",
+        "local_name": "Geruwa",
+        "local_type": "Gaunpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261113-010.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.37846,
+          28.20812
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261113-009",
+        "first_seen_utc": "2026-11-13T07:50:00+00:00",
+        "last_seen_utc": "2026-11-13T07:50:00+00:00",
+        "max_frp": 2.62,
+        "detection_count": 1,
+        "province": "Lumbini",
+        "district": "Bardiya",
+        "local_name": "Gulariya",
+        "local_type": "Nagarpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261113-009.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.63546,
+          28.11384
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261113-008",
+        "first_seen_utc": "2026-11-13T07:50:00+00:00",
+        "last_seen_utc": "2026-11-13T07:50:00+00:00",
+        "max_frp": 3.7,
+        "detection_count": 1,
+        "province": "Lumbini",
+        "district": "Banke",
+        "local_name": "Janki",
+        "local_type": "Gaunpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261113-008.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.76948,
+          27.94216
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261113-007",
+        "first_seen_utc": "2026-11-13T07:50:00+00:00",
+        "last_seen_utc": "2026-11-13T07:50:00+00:00",
+        "max_frp": 1.81,
+        "detection_count": 1,
+        "province": "Lumbini",
+        "district": "Banke",
+        "local_name": "Narainapur",
+        "local_type": "Gaunpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261113-007.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.08722,
+          27.54763
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261113-006",
+        "first_seen_utc": "2026-11-13T07:50:00+00:00",
+        "last_seen_utc": "2026-11-13T07:50:00+00:00",
+        "max_frp": 2.97,
+        "detection_count": 1,
+        "province": "Lumbini",
+        "district": "Kapilbastu",
+        "local_name": "Kapilbastu",
+        "local_type": "Nagarpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261113-006.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.69525,
+          27.51259
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261113-005",
+        "first_seen_utc": "2026-11-13T07:50:00+00:00",
+        "last_seen_utc": "2026-11-13T07:50:00+00:00",
+        "max_frp": 4.15,
+        "detection_count": 1,
+        "province": "Lumbini",
+        "district": "Nawalparasi_W",
+        "local_name": "Ramgram",
+        "local_type": "Nagarpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261113-005.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.12592,
+          27.48926
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261113-004",
+        "first_seen_utc": "2026-11-13T07:50:00+00:00",
+        "last_seen_utc": "2026-11-13T07:50:00+00:00",
+        "max_frp": 5.26,
+        "detection_count": 1,
+        "province": "Lumbini",
+        "district": "Kapilbastu",
+        "local_name": "Mayadevi",
+        "local_type": "Gaunpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261113-004.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.30825,
+          27.41146
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261113-003",
+        "first_seen_utc": "2026-11-13T07:50:00+00:00",
+        "last_seen_utc": "2026-11-13T07:50:00+00:00",
+        "max_frp": 2.33,
+        "detection_count": 1,
+        "province": "Lumbini",
+        "district": "Rupandehi",
+        "local_name": "Sammarimai",
+        "local_type": "Gaunpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261113-003.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          87.90863,
+          26.60679
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261113-002",
+        "first_seen_utc": "2026-11-13T07:48:00+00:00",
+        "last_seen_utc": "2026-11-13T07:48:00+00:00",
+        "max_frp": 7.09,
+        "detection_count": 1,
+        "province": "Koshi",
+        "district": "Jhapa",
+        "local_name": "Kankai",
+        "local_type": "Nagarpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261113-002.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.26515,
+          28.30306
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261113-001",
+        "first_seen_utc": "2026-11-13T07:05:00+00:00",
+        "last_seen_utc": "2026-11-13T07:05:00+00:00",
+        "max_frp": 1.53,
+        "detection_count": 1,
+        "province": "Lumbini",
+        "district": "Bardiya",
+        "local_name": "Madhuwan",
+        "local_type": "Nagarpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261113-001.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           81.34927,
           28.18469
         ]
