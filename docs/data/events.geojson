@@ -6,6 +6,167 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          83.07028,
+          27.52778
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261115-007",
+        "first_seen_utc": "2026-11-15T08:07:00+00:00",
+        "last_seen_utc": "2026-11-15T08:07:00+00:00",
+        "max_frp": 2.41,
+        "detection_count": 1,
+        "province": "Lumbini",
+        "district": "Kapilbastu",
+        "local_name": "Kapilbastu",
+        "local_type": "Nagarpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261115-007.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.34627,
+          27.43186
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261115-006",
+        "first_seen_utc": "2026-11-15T08:07:00+00:00",
+        "last_seen_utc": "2026-11-15T08:07:00+00:00",
+        "max_frp": 7.1,
+        "detection_count": 1,
+        "province": "Lumbini",
+        "district": "Rupandehi",
+        "local_name": "Kotahimai",
+        "local_type": "Gaunpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261115-006.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.68488,
+          27.48695
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261115-005",
+        "first_seen_utc": "2026-11-15T07:11:00+00:00",
+        "last_seen_utc": "2026-11-15T07:11:00+00:00",
+        "max_frp": 7.19,
+        "detection_count": 1,
+        "province": "Lumbini",
+        "district": "Nawalparasi_W",
+        "local_name": "Palhi Nandan",
+        "local_type": "Gaunpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261115-005.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          87.64425,
+          26.50758
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261115-004",
+        "first_seen_utc": "2026-11-15T07:09:00+00:00",
+        "last_seen_utc": "2026-11-15T07:09:00+00:00",
+        "max_frp": 2.47,
+        "detection_count": 1,
+        "province": "Koshi",
+        "district": "Jhapa",
+        "local_name": "Gauradhaha",
+        "local_type": "Nagarpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261115-004.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          87.84887,
+          26.464315
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261115-003",
+        "first_seen_utc": "2026-11-15T07:09:00+00:00",
+        "last_seen_utc": "2026-11-15T07:09:00+00:00",
+        "max_frp": 4.99,
+        "detection_count": 2,
+        "province": "Koshi",
+        "district": "Jhapa",
+        "local_name": "Jhapa",
+        "local_type": "Gaunpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261115-003.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          87.9207,
+          26.45711
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261115-002",
+        "first_seen_utc": "2026-11-15T07:09:00+00:00",
+        "last_seen_utc": "2026-11-15T07:09:00+00:00",
+        "max_frp": 3.72,
+        "detection_count": 1,
+        "province": "Koshi",
+        "district": "Jhapa",
+        "local_name": "Barhadashi",
+        "local_type": "Gaunpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261115-002.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          87.55033499999999,
+          26.426054999999998
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261115-001",
+        "first_seen_utc": "2026-11-15T07:09:00+00:00",
+        "last_seen_utc": "2026-11-15T07:09:00+00:00",
+        "max_frp": 2.57,
+        "detection_count": 2,
+        "province": "Koshi",
+        "district": "Morang",
+        "local_name": "Sunwarshi",
+        "local_type": "Nagarpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261115-001.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           80.0862,
           28.8935
         ]
