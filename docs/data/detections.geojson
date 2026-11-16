@@ -6,6 +6,1195 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          82.34288,
+          29.59555
+        ]
+      },
+      "properties": {
+        "detection_id": "4661c3d3706906e849bfdba755cb958832f15b3a",
+        "event_id": "NFW-20261116-027",
+        "source": "VIIRS_NOAA21_NRT",
+        "satellite": "N21",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T08:34:00+00:00",
+        "observed_npt": "2026-11-16T14:19:00+05:45",
+        "confidence": "nominal",
+        "frp": 12.48,
+        "daynight": "D",
+        "bright_ti4": 329.88,
+        "bright_ti5": 293.46,
+        "province": "Karnali",
+        "district": "Mugu",
+        "local_name": "Mugum Karmarong",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          82.33887,
+          29.59675
+        ]
+      },
+      "properties": {
+        "detection_id": "c9f004cb31b63258aaa89146990c68b8c04814d4",
+        "event_id": "NFW-20261116-027",
+        "source": "VIIRS_NOAA21_NRT",
+        "satellite": "N21",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T08:34:00+00:00",
+        "observed_npt": "2026-11-16T14:19:00+05:45",
+        "confidence": "nominal",
+        "frp": 60.45,
+        "daynight": "D",
+        "bright_ti4": 350.05,
+        "bright_ti5": 291.22,
+        "province": "Karnali",
+        "district": "Mugu",
+        "local_name": "Mugum Karmarong",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          82.34249,
+          29.5969
+        ]
+      },
+      "properties": {
+        "detection_id": "ecc8dbcb1f319c00b00be19e6b637a9f796184c3",
+        "event_id": "NFW-20261116-027",
+        "source": "VIIRS_NOAA21_NRT",
+        "satellite": "N21",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T08:34:00+00:00",
+        "observed_npt": "2026-11-16T14:19:00+05:45",
+        "confidence": "high",
+        "frp": 60.45,
+        "daynight": "D",
+        "bright_ti4": 367.0,
+        "bright_ti5": 297.96,
+        "province": "Karnali",
+        "district": "Mugu",
+        "local_name": "Mugum Karmarong",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          82.34632,
+          29.59706
+        ]
+      },
+      "properties": {
+        "detection_id": "5f1c8e139f3b34b25380f6084cfd5bcf83e585bc",
+        "event_id": "NFW-20261116-027",
+        "source": "VIIRS_NOAA21_NRT",
+        "satellite": "N21",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T08:34:00+00:00",
+        "observed_npt": "2026-11-16T14:19:00+05:45",
+        "confidence": "high",
+        "frp": 53.5,
+        "daynight": "D",
+        "bright_ti4": 367.0,
+        "bright_ti5": 293.16,
+        "province": "Karnali",
+        "district": "Mugu",
+        "local_name": "Mugum Karmarong",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          82.33936,
+          29.60223
+        ]
+      },
+      "properties": {
+        "detection_id": "e7473ad10c86e93d3730772bf2f76364e25111b5",
+        "event_id": "NFW-20261116-027",
+        "source": "VIIRS_NOAA21_NRT",
+        "satellite": "N21",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T08:34:00+00:00",
+        "observed_npt": "2026-11-16T14:19:00+05:45",
+        "confidence": "nominal",
+        "frp": 51.18,
+        "daynight": "D",
+        "bright_ti4": 347.11,
+        "bright_ti5": 289.05,
+        "province": "Karnali",
+        "district": "Mugu",
+        "local_name": "Mugum Karmarong",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          82.34324,
+          29.60241
+        ]
+      },
+      "properties": {
+        "detection_id": "8d7b8831d158ced17c7008e84b3dd065800bfbdc",
+        "event_id": "NFW-20261116-027",
+        "source": "VIIRS_NOAA21_NRT",
+        "satellite": "N21",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T08:34:00+00:00",
+        "observed_npt": "2026-11-16T14:19:00+05:45",
+        "confidence": "high",
+        "frp": 56.49,
+        "daynight": "D",
+        "bright_ti4": 367.0,
+        "bright_ti5": 295.54,
+        "province": "Karnali",
+        "district": "Mugu",
+        "local_name": "Mugum Karmarong",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          82.34708,
+          29.60259
+        ]
+      },
+      "properties": {
+        "detection_id": "8de87a947307a4ab15d40177ca517d01ccf9e439",
+        "event_id": "NFW-20261116-027",
+        "source": "VIIRS_NOAA21_NRT",
+        "satellite": "N21",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T08:34:00+00:00",
+        "observed_npt": "2026-11-16T14:19:00+05:45",
+        "confidence": "high",
+        "frp": 56.49,
+        "daynight": "D",
+        "bright_ti4": 367.0,
+        "bright_ti5": 291.76,
+        "province": "Karnali",
+        "district": "Mugu",
+        "local_name": "Mugum Karmarong",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          84.75399,
+          27.20052
+        ]
+      },
+      "properties": {
+        "detection_id": "efd8bf0ca4a6f8be421ebc042d9e0cd58b5174d6",
+        "event_id": "NFW-20261116-006",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T07:50:00+00:00",
+        "observed_npt": "2026-11-16T13:35:00+05:45",
+        "confidence": "nominal",
+        "frp": 3.19,
+        "daynight": "D",
+        "bright_ti4": 333.54,
+        "bright_ti5": 300.32,
+        "province": "Madhesh",
+        "district": "Parsa",
+        "local_name": "Jirabhawani",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.39352,
+          27.41941
+        ]
+      },
+      "properties": {
+        "detection_id": "da08441b1e0d5a549d7b1c346023435cd3299f94",
+        "event_id": "NFW-20261116-007",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T07:50:00+00:00",
+        "observed_npt": "2026-11-16T13:35:00+05:45",
+        "confidence": "nominal",
+        "frp": 1.98,
+        "daynight": "D",
+        "bright_ti4": 327.81,
+        "bright_ti5": 299.48,
+        "province": "Lumbini",
+        "district": "Rupandehi",
+        "local_name": "Kotahimai",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.39071,
+          27.46127
+        ]
+      },
+      "properties": {
+        "detection_id": "9d6e16bede8d7e87dd72658415efd75c67a58308",
+        "event_id": "NFW-20261116-008",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T07:50:00+00:00",
+        "observed_npt": "2026-11-16T13:35:00+05:45",
+        "confidence": "nominal",
+        "frp": 5.02,
+        "daynight": "D",
+        "bright_ti4": 341.13,
+        "bright_ti5": 301.0,
+        "province": "Lumbini",
+        "district": "Rupandehi",
+        "local_name": "Kotahimai",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.14115,
+          27.46558
+        ]
+      },
+      "properties": {
+        "detection_id": "e64d88e1f526424750a903521cdda80eded33f83",
+        "event_id": "NFW-20261116-009",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T07:50:00+00:00",
+        "observed_npt": "2026-11-16T13:35:00+05:45",
+        "confidence": "nominal",
+        "frp": 2.76,
+        "daynight": "D",
+        "bright_ti4": 332.46,
+        "bright_ti5": 300.63,
+        "province": "Lumbini",
+        "district": "Kapilbastu",
+        "local_name": "Mayadevi",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.68141,
+          27.47554
+        ]
+      },
+      "properties": {
+        "detection_id": "dd6dd21fb9b814331189b2d1c7128bcb3b5d4217",
+        "event_id": "NFW-20261116-010",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T07:50:00+00:00",
+        "observed_npt": "2026-11-16T13:35:00+05:45",
+        "confidence": "nominal",
+        "frp": 1.82,
+        "daynight": "D",
+        "bright_ti4": 327.74,
+        "bright_ti5": 298.15,
+        "province": "Lumbini",
+        "district": "Nawalparasi_W",
+        "local_name": "Palhi Nandan",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          82.99606,
+          27.47723
+        ]
+      },
+      "properties": {
+        "detection_id": "01f2fc8c89e5c930efbb81e678c708997db9ae13",
+        "event_id": "NFW-20261116-011",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T07:50:00+00:00",
+        "observed_npt": "2026-11-16T13:35:00+05:45",
+        "confidence": "nominal",
+        "frp": 2.96,
+        "daynight": "D",
+        "bright_ti4": 337.55,
+        "bright_ti5": 300.99,
+        "province": "Lumbini",
+        "district": "Kapilbastu",
+        "local_name": "Yashodhara",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.23647,
+          27.48229
+        ]
+      },
+      "properties": {
+        "detection_id": "e925b9b7e592c228a75ee7b39a2bc667f1a2b8e7",
+        "event_id": "NFW-20261116-012",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T07:50:00+00:00",
+        "observed_npt": "2026-11-16T13:35:00+05:45",
+        "confidence": "nominal",
+        "frp": 2.36,
+        "daynight": "D",
+        "bright_ti4": 331.05,
+        "bright_ti5": 301.41,
+        "province": "Lumbini",
+        "district": "Rupandehi",
+        "local_name": "Lumbini Sanskritik",
+        "local_type": "Nagarpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.05978,
+          27.49991
+        ]
+      },
+      "properties": {
+        "detection_id": "17819b37a3834dc8867a66b21324fcd0c74f724f",
+        "event_id": "NFW-20261116-013",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T07:50:00+00:00",
+        "observed_npt": "2026-11-16T13:35:00+05:45",
+        "confidence": "nominal",
+        "frp": 1.83,
+        "daynight": "D",
+        "bright_ti4": 327.15,
+        "bright_ti5": 300.17,
+        "province": "Lumbini",
+        "district": "Kapilbastu",
+        "local_name": "Yashodhara",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.1785,
+          27.50217
+        ]
+      },
+      "properties": {
+        "detection_id": "9be778414986f77ca2c4d8bf2ad4470c7b09ff49",
+        "event_id": "NFW-20261116-002",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T07:50:00+00:00",
+        "observed_npt": "2026-11-16T13:35:00+05:45",
+        "confidence": "nominal",
+        "frp": 3.36,
+        "daynight": "D",
+        "bright_ti4": 338.98,
+        "bright_ti5": 301.0,
+        "province": "Lumbini",
+        "district": "Kapilbastu",
+        "local_name": "Suddhodhan",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.57526,
+          27.50393
+        ]
+      },
+      "properties": {
+        "detection_id": "9bf2df7c1e877af0c7c4be4e227067ac2ae11df4",
+        "event_id": "NFW-20261116-014",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T07:50:00+00:00",
+        "observed_npt": "2026-11-16T13:35:00+05:45",
+        "confidence": "nominal",
+        "frp": 1.79,
+        "daynight": "D",
+        "bright_ti4": 328.87,
+        "bright_ti5": 298.83,
+        "province": "Lumbini",
+        "district": "Rupandehi",
+        "local_name": "Rohini",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.29702,
+          27.5047
+        ]
+      },
+      "properties": {
+        "detection_id": "9e05d050d1b4919181d6c2312ef44e998ce2e018",
+        "event_id": "NFW-20261116-015",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T07:50:00+00:00",
+        "observed_npt": "2026-11-16T13:35:00+05:45",
+        "confidence": "nominal",
+        "frp": 3.36,
+        "daynight": "D",
+        "bright_ti4": 341.07,
+        "bright_ti5": 301.31,
+        "province": "Lumbini",
+        "district": "Rupandehi",
+        "local_name": "Lumbini Sanskritik",
+        "local_type": "Nagarpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          82.92728,
+          27.50944
+        ]
+      },
+      "properties": {
+        "detection_id": "7e29253d808194ae0203b88bf9cb98c4f76c31d7",
+        "event_id": "NFW-20261116-016",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T07:50:00+00:00",
+        "observed_npt": "2026-11-16T13:35:00+05:45",
+        "confidence": "nominal",
+        "frp": 2.01,
+        "daynight": "D",
+        "bright_ti4": 328.52,
+        "bright_ti5": 300.16,
+        "province": "Lumbini",
+        "district": "Kapilbastu",
+        "local_name": "Maharajgunj",
+        "local_type": "Nagarpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.06924,
+          27.51865
+        ]
+      },
+      "properties": {
+        "detection_id": "c09e9a1b8955208e4147842be82b257079329c7f",
+        "event_id": "NFW-20261116-013",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T07:50:00+00:00",
+        "observed_npt": "2026-11-16T13:35:00+05:45",
+        "confidence": "nominal",
+        "frp": 4.86,
+        "daynight": "D",
+        "bright_ti4": 343.18,
+        "bright_ti5": 301.19,
+        "province": "Lumbini",
+        "district": "Kapilbastu",
+        "local_name": "Kapilbastu",
+        "local_type": "Nagarpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          82.94957,
+          27.52645
+        ]
+      },
+      "properties": {
+        "detection_id": "d3b61ec1f36e9880773d57f05f702599435d883e",
+        "event_id": "NFW-20261116-016",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T07:50:00+00:00",
+        "observed_npt": "2026-11-16T13:35:00+05:45",
+        "confidence": "nominal",
+        "frp": 1.74,
+        "daynight": "D",
+        "bright_ti4": 328.32,
+        "bright_ti5": 300.43,
+        "province": "Lumbini",
+        "district": "Kapilbastu",
+        "local_name": "Maharajgunj",
+        "local_type": "Nagarpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.37618,
+          27.55353
+        ]
+      },
+      "properties": {
+        "detection_id": "246bac4cb9a88625a748be5f03463d5d0517604a",
+        "event_id": "NFW-20261116-017",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T07:50:00+00:00",
+        "observed_npt": "2026-11-16T13:35:00+05:45",
+        "confidence": "nominal",
+        "frp": 2.13,
+        "daynight": "D",
+        "bright_ti4": 329.7,
+        "bright_ti5": 299.47,
+        "province": "Lumbini",
+        "district": "Rupandehi",
+        "local_name": "Siyari",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.22284,
+          27.56776
+        ]
+      },
+      "properties": {
+        "detection_id": "5cfb176f8f884dbb0e39ad830e8e2064f5ea4b0b",
+        "event_id": "NFW-20261116-018",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T07:50:00+00:00",
+        "observed_npt": "2026-11-16T13:35:00+05:45",
+        "confidence": "nominal",
+        "frp": 1.75,
+        "daynight": "D",
+        "bright_ti4": 330.48,
+        "bright_ti5": 301.18,
+        "province": "Lumbini",
+        "district": "Rupandehi",
+        "local_name": "Gaidahawa",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.26002,
+          27.57638
+        ]
+      },
+      "properties": {
+        "detection_id": "b6052d4a5475e6dd0a2e3be0016aeb0556efee69",
+        "event_id": "NFW-20261116-019",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T07:50:00+00:00",
+        "observed_npt": "2026-11-16T13:35:00+05:45",
+        "confidence": "nominal",
+        "frp": 3.2,
+        "daynight": "D",
+        "bright_ti4": 338.77,
+        "bright_ti5": 300.69,
+        "province": "Lumbini",
+        "district": "Rupandehi",
+        "local_name": "Gaidahawa",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.19061,
+          27.58084
+        ]
+      },
+      "properties": {
+        "detection_id": "f1e2e7bfa8d41cb1b88bcd12afdbbf98a94d6b84",
+        "event_id": "NFW-20261116-020",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T07:50:00+00:00",
+        "observed_npt": "2026-11-16T13:35:00+05:45",
+        "confidence": "nominal",
+        "frp": 1.23,
+        "daynight": "D",
+        "bright_ti4": 328.72,
+        "bright_ti5": 300.33,
+        "province": "Lumbini",
+        "district": "Kapilbastu",
+        "local_name": "Suddhodhan",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.62171,
+          28.1192
+        ]
+      },
+      "properties": {
+        "detection_id": "37cefce162223dc57846070a87c6ce1abc0d6384",
+        "event_id": "NFW-20261116-021",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T07:50:00+00:00",
+        "observed_npt": "2026-11-16T13:35:00+05:45",
+        "confidence": "nominal",
+        "frp": 1.9,
+        "daynight": "D",
+        "bright_ti4": 328.94,
+        "bright_ti5": 301.04,
+        "province": "Lumbini",
+        "district": "Banke",
+        "local_name": "Janki",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.48119,
+          28.16297
+        ]
+      },
+      "properties": {
+        "detection_id": "2e8b42670cecacad23bc49cc1853250292196e1b",
+        "event_id": "NFW-20261116-022",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T07:50:00+00:00",
+        "observed_npt": "2026-11-16T13:35:00+05:45",
+        "confidence": "nominal",
+        "frp": 1.6,
+        "daynight": "D",
+        "bright_ti4": 327.42,
+        "bright_ti5": 300.06,
+        "province": "Lumbini",
+        "district": "Bardiya",
+        "local_name": "Badhaiyatal",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.45934,
+          28.2547
+        ]
+      },
+      "properties": {
+        "detection_id": "a5d17b39d1829d1c309285cb4c8a06af28252400",
+        "event_id": "NFW-20261116-023",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T07:50:00+00:00",
+        "observed_npt": "2026-11-16T13:35:00+05:45",
+        "confidence": "nominal",
+        "frp": 3.78,
+        "daynight": "D",
+        "bright_ti4": 339.15,
+        "bright_ti5": 300.56,
+        "province": "Lumbini",
+        "district": "Bardiya",
+        "local_name": "Bansagadhi",
+        "local_type": "Nagarpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.16322,
+          28.4415
+        ]
+      },
+      "properties": {
+        "detection_id": "05af3c960896d3536f8acd9109fa7d55185ca78a",
+        "event_id": "NFW-20261116-024",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T07:50:00+00:00",
+        "observed_npt": "2026-11-16T13:35:00+05:45",
+        "confidence": "nominal",
+        "frp": 3.76,
+        "daynight": "D",
+        "bright_ti4": 339.79,
+        "bright_ti5": 301.26,
+        "province": "Lumbini",
+        "district": "Bardiya",
+        "local_name": "Rajapur",
+        "local_type": "Nagarpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.13349,
+          28.47094
+        ]
+      },
+      "properties": {
+        "detection_id": "6406a9504654179fc693925e830b1dc3b0c563c8",
+        "event_id": "NFW-20261116-025",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T07:50:00+00:00",
+        "observed_npt": "2026-11-16T13:35:00+05:45",
+        "confidence": "nominal",
+        "frp": 1.74,
+        "daynight": "D",
+        "bright_ti4": 329.51,
+        "bright_ti5": 300.43,
+        "province": "Lumbini",
+        "district": "Bardiya",
+        "local_name": "Rajapur",
+        "local_type": "Nagarpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.57394,
+          28.79044
+        ]
+      },
+      "properties": {
+        "detection_id": "c735fa13f0071fe739233dbf1d1beace2dc9f3bf",
+        "event_id": "NFW-20261116-026",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T07:50:00+00:00",
+        "observed_npt": "2026-11-16T13:35:00+05:45",
+        "confidence": "nominal",
+        "frp": 1.94,
+        "daynight": "D",
+        "bright_ti4": 330.74,
+        "bright_ti5": 300.6,
+        "province": "Sudurpashchim",
+        "district": "Kailali",
+        "local_name": "Godawari",
+        "local_type": "Nagarpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.92883,
+          29.11021
+        ]
+      },
+      "properties": {
+        "detection_id": "9f4a1815e1579af86c82d8c665d3fae4c514d485",
+        "event_id": "NFW-20261116-005",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T07:50:00+00:00",
+        "observed_npt": "2026-11-16T13:35:00+05:45",
+        "confidence": "nominal",
+        "frp": 24.55,
+        "daynight": "D",
+        "bright_ti4": 340.54,
+        "bright_ti5": 305.09,
+        "province": "Karnali",
+        "district": "Kalikot",
+        "local_name": "Tilagufa",
+        "local_type": "Nagarpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          82.34814,
+          29.59262
+        ]
+      },
+      "properties": {
+        "detection_id": "6fba62919aa53fc3425b07c3ed2e45f0fb6e59b0",
+        "event_id": "NFW-20261116-027",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T07:50:00+00:00",
+        "observed_npt": "2026-11-16T13:35:00+05:45",
+        "confidence": "nominal",
+        "frp": 3.33,
+        "daynight": "D",
+        "bright_ti4": 331.27,
+        "bright_ti5": 300.04,
+        "province": "Karnali",
+        "district": "Mugu",
+        "local_name": "Mugum Karmarong",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          82.35203,
+          29.59315
+        ]
+      },
+      "properties": {
+        "detection_id": "24a316c25cc85276c6764390196d603aa649fba5",
+        "event_id": "NFW-20261116-027",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T07:50:00+00:00",
+        "observed_npt": "2026-11-16T13:35:00+05:45",
+        "confidence": "nominal",
+        "frp": 3.5,
+        "daynight": "D",
+        "bright_ti4": 331.74,
+        "bright_ti5": 296.34,
+        "province": "Karnali",
+        "district": "Mugu",
+        "local_name": "Mugum Karmarong",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.92775,
+          29.10928
+        ]
+      },
+      "properties": {
+        "detection_id": "2d4bc36a4875be63666f11dd832ee817429154e2",
+        "event_id": "NFW-20261116-005",
+        "source": "VIIRS_NOAA21_NRT",
+        "satellite": "N21",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T06:54:00+00:00",
+        "observed_npt": "2026-11-16T12:39:00+05:45",
+        "confidence": "nominal",
+        "frp": 4.85,
+        "daynight": "D",
+        "bright_ti4": 334.36,
+        "bright_ti5": 293.3,
+        "province": "Karnali",
+        "district": "Kalikot",
+        "local_name": "Tilagufa",
+        "local_type": "Nagarpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.29522,
+          27.38858
+        ]
+      },
+      "properties": {
+        "detection_id": "4cf675eb33014837083b78d221f2dfa67742d8bb",
+        "event_id": "NFW-20261116-001",
+        "source": "VIIRS_NOAA21_NRT",
+        "satellite": "N21",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T06:52:00+00:00",
+        "observed_npt": "2026-11-16T12:37:00+05:45",
+        "confidence": "nominal",
+        "frp": 3.93,
+        "daynight": "D",
+        "bright_ti4": 331.9,
+        "bright_ti5": 298.97,
+        "province": "Lumbini",
+        "district": "Rupandehi",
+        "local_name": "Sammarimai",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.18002,
+          27.48864
+        ]
+      },
+      "properties": {
+        "detection_id": "d70daa2772a17987c5f2e577441ac03cec2a0dfb",
+        "event_id": "NFW-20261116-002",
+        "source": "VIIRS_NOAA21_NRT",
+        "satellite": "N21",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T06:52:00+00:00",
+        "observed_npt": "2026-11-16T12:37:00+05:45",
+        "confidence": "nominal",
+        "frp": 3.18,
+        "daynight": "D",
+        "bright_ti4": 332.64,
+        "bright_ti5": 298.69,
+        "province": "Lumbini",
+        "district": "Kapilbastu",
+        "local_name": "Suddhodhan",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.63577,
+          27.49981
+        ]
+      },
+      "properties": {
+        "detection_id": "aadd788ec33683b9eeb4210f1193f4788f46ba7e",
+        "event_id": "NFW-20261116-003",
+        "source": "VIIRS_NOAA21_NRT",
+        "satellite": "N21",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T06:52:00+00:00",
+        "observed_npt": "2026-11-16T12:37:00+05:45",
+        "confidence": "nominal",
+        "frp": 6.84,
+        "daynight": "D",
+        "bright_ti4": 341.81,
+        "bright_ti5": 295.41,
+        "province": "Lumbini",
+        "district": "Nawalparasi_W",
+        "local_name": "Ramgram",
+        "local_type": "Nagarpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.17561,
+          27.50428
+        ]
+      },
+      "properties": {
+        "detection_id": "b1b0d85c91dc296271b0c75fb4cb8582c19af05e",
+        "event_id": "NFW-20261116-002",
+        "source": "VIIRS_NOAA21_NRT",
+        "satellite": "N21",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T06:52:00+00:00",
+        "observed_npt": "2026-11-16T12:37:00+05:45",
+        "confidence": "nominal",
+        "frp": 3.43,
+        "daynight": "D",
+        "bright_ti4": 330.69,
+        "bright_ti5": 300.44,
+        "province": "Lumbini",
+        "district": "Kapilbastu",
+        "local_name": "Suddhodhan",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.61916,
+          27.50683
+        ]
+      },
+      "properties": {
+        "detection_id": "6b69c71f20c2ad94a6c2f61a79c23907d0691212",
+        "event_id": "NFW-20261116-003",
+        "source": "VIIRS_NOAA21_NRT",
+        "satellite": "N21",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T06:52:00+00:00",
+        "observed_npt": "2026-11-16T12:37:00+05:45",
+        "confidence": "nominal",
+        "frp": 2.9,
+        "daynight": "D",
+        "bright_ti4": 329.04,
+        "bright_ti5": 296.03,
+        "province": "Lumbini",
+        "district": "Nawalparasi_W",
+        "local_name": "Ramgram",
+        "local_type": "Nagarpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.19971,
+          27.5154
+        ]
+      },
+      "properties": {
+        "detection_id": "2272bb787e35e8d08c811e2cbef86022bfb53ca7",
+        "event_id": "NFW-20261116-004",
+        "source": "VIIRS_NOAA21_NRT",
+        "satellite": "N21",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-16T06:52:00+00:00",
+        "observed_npt": "2026-11-16T12:37:00+05:45",
+        "confidence": "nominal",
+        "frp": 1.78,
+        "daynight": "D",
+        "bright_ti4": 327.46,
+        "bright_ti5": 300.41,
+        "province": "Lumbini",
+        "district": "Kapilbastu",
+        "local_name": "Suddhodhan",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-16T18:23:43+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           83.34627,
           27.43186
         ]
