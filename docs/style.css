@@ -81,3 +81,4 @@ aside h2{margin-top:0}
 .legend-anomaly{background:#f2cc60}
 .legend-probable{background:#f0a14b}
 .legend-high{background:#ff5d5d}
+.lifecycle-badge{display:inline-block;margin:5px 0 5px 6px;padding:2px 7px;border-radius:999px;font-size:10px;font-weight:700;letter-spacing:.04em;border:1px solid #56606c;color:#dce3ea}.lifecycle-new{border-color:#67b7dc;color:#8ed8f8}.lifecycle-active{border-color:#ffb454;color:#ffbf70}.lifecycle-persistent{border-color:#ff6b6b;color:#ff8585}.lifecycle-quiet{border-color:#9099a4;color:#b5bdc7}.lifecycle-closed{border-color:#666d76;color:#8d959f}

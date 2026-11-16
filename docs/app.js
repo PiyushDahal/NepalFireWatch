@@ -117,8 +117,9 @@ async function load() {
   }
   renderHealth(health);
 
+  const openCount = s.open_event_count ?? s.event_count;
   document.getElementById('status').textContent =
-    `${s.event_count} events • ${s.detection_count} detections`;
+    `${openCount} open • ${s.event_count} total events • ${s.detection_count} detections`;
 
   const box = document.getElementById('events');
   box.innerHTML = '';
@@ -140,6 +141,7 @@ async function load() {
       .filter(Boolean)
       .join(', ');
 
+    const lifecycle = String(p.lifecycle_state || "NEW").toUpperCase();
     const score = p.evidence_score ?? 0;
     const satellites = p.satellite_count ?? 0;
     const duration = Number(p.duration_hours ?? 0).toFixed(1);
@@ -148,6 +150,7 @@ async function load() {
       `<b>${esc(p.event_id)}</b><br>` +
       `<span class="confidence-badge confidence-${esc(vis.cls)}">${esc(vis.label)}</span><br>` +
       `${esc(loc)}<br>` +
+      `Lifecycle: <b>${esc(lifecycle)}</b><br>` +
       `Evidence score: ${esc(score)}<br>` +
       `Detections: ${esc(p.detection_count)}<br>` +
       `Satellites: ${esc(satellites)}<br>` +
@@ -161,6 +164,7 @@ async function load() {
     div.innerHTML =
       `<b>${esc(p.event_id)}</b>` +
       `<span class="confidence-badge confidence-${esc(vis.cls)}">${esc(vis.label)}</span>` +
+      `<span class="lifecycle-badge lifecycle-${esc(lifecycle.toLowerCase())}">${esc(lifecycle)}</span>` +
       `<small>${esc(loc)}</small><br>` +
       `<small>${esc(formatNpt(p.last_seen_utc))}</small><br>` +
       `<small>Evidence ${esc(score)} • ${esc(p.detection_count)} detections • ${esc(satellites)} satellite(s)</small><br>` +

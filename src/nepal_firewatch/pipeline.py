@@ -67,8 +67,18 @@ def run_pipeline(demo: bool = False) -> dict:
         new_detections, new_events, touched = ingest(
             con, records, s.cluster_km, s.cluster_hours
         )
+        lifecycle_changed = db.update_all_lifecycles(
+            con,
+            quiet_hours=s.lifecycle_quiet_hours,
+            closed_hours=s.lifecycle_closed_hours,
+            active_overpasses=s.lifecycle_active_overpasses,
+            persistent_overpasses=s.lifecycle_persistent_overpasses,
+            active_duration_hours=s.lifecycle_active_duration_hours,
+            persistent_duration_hours=s.lifecycle_persistent_duration_hours,
+        )
+        card_event_ids = set(touched) | set(lifecycle_changed)
 
-        for event_id in sorted(touched):
+        for event_id in sorted(card_event_ids):
             event = _event_dict(con, event_id)
             ward = None
             if ward_resolver is not None:

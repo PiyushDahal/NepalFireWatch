@@ -5,6 +5,7 @@ import sqlite3
 from pathlib import Path
 
 from .confidence import classify_event
+from .lifecycle import LifecycleThresholds, classify_lifecycle
 from .utils import utcnow_iso
 
 
@@ -27,6 +28,11 @@ CREATE TABLE IF NOT EXISTS events (
     ward_id TEXT,
     ward_source TEXT,
     status TEXT NOT NULL DEFAULT 'active',
+    lifecycle_state TEXT NOT NULL DEFAULT 'NEW',
+    lifecycle_reason TEXT NOT NULL DEFAULT '',
+    lifecycle_updated_utc TEXT,
+    inactive_hours REAL NOT NULL DEFAULT 0.0,
+    closed_utc TEXT,
     card_path TEXT,
     evidence_score INTEGER NOT NULL DEFAULT 0,
     confidence_class TEXT NOT NULL DEFAULT 'anomaly',
@@ -89,6 +95,14 @@ EVENT_WARD_COLUMNS = {
     "ward_source": "TEXT",
 }
 
+EVENT_LIFECYCLE_COLUMNS = {
+    "lifecycle_state": "TEXT NOT NULL DEFAULT 'NEW'",
+    "lifecycle_reason": "TEXT NOT NULL DEFAULT ''",
+    "lifecycle_updated_utc": "TEXT",
+    "inactive_hours": "REAL NOT NULL DEFAULT 0.0",
+    "closed_utc": "TEXT",
+}
+
 def _event_columns(con: sqlite3.Connection) -> set[str]:
     return {row[1] for row in con.execute("PRAGMA table_info(events)").fetchall()}
 
@@ -108,6 +122,15 @@ def _migrate_event_ward_columns(con: sqlite3.Connection) -> bool:
     existing = _event_columns(con)
     changed = False
     for name, sql_type in EVENT_WARD_COLUMNS.items():
+        if name not in existing:
+            con.execute(f"ALTER TABLE events ADD COLUMN {name} {sql_type}")
+            changed = True
+    return changed
+
+def _migrate_event_lifecycle_columns(con: sqlite3.Connection) -> bool:
+    existing = _event_columns(con)
+    changed = False
+    for name, sql_type in EVENT_LIFECYCLE_COLUMNS.items():
         if name not in existing:
             con.execute(f"ALTER TABLE events ADD COLUMN {name} {sql_type}")
             changed = True
@@ -159,6 +182,7 @@ def connect(path: Path) -> sqlite3.Connection:
 
     migrated = _migrate_event_confidence_columns(con)
     _migrate_event_ward_columns(con)
+    _migrate_event_lifecycle_columns(con)
     if migrated:
         # One-time classification of all events already stored in the v0.1 database.
         _backfill_confidence(con)
@@ -261,6 +285,79 @@ def set_event_ward(con, event_id: str, ward: dict | None) -> None:
             event_id,
         ),
     )
+
+def update_all_lifecycles(
+    con,
+    *,
+    now_utc: str | None = None,
+    quiet_hours: float = 8.0,
+    closed_hours: float = 24.0,
+    active_overpasses: int = 2,
+    persistent_overpasses: int = 3,
+    active_duration_hours: float = 1.0,
+    persistent_duration_hours: float = 12.0,
+) -> list[str]:
+    """Re-evaluate every event and return IDs whose lifecycle state changed."""
+    now_utc = now_utc or utcnow_iso()
+    thresholds = LifecycleThresholds(
+        quiet_hours=quiet_hours,
+        closed_hours=closed_hours,
+        active_overpasses=active_overpasses,
+        persistent_overpasses=persistent_overpasses,
+        active_duration_hours=active_duration_hours,
+        persistent_duration_hours=persistent_duration_hours,
+    )
+    thresholds.validate()
+
+    changed_ids: list[str] = []
+    rows = con.execute("SELECT * FROM events").fetchall()
+
+    for row in rows:
+        event = dict(row)
+        result = classify_lifecycle(event, now_utc=now_utc, thresholds=thresholds)
+
+        old_state = str(event.get("lifecycle_state") or "NEW").upper()
+        new_state = result["lifecycle_state"]
+        state_changed = old_state != new_state
+
+        updated_utc = event.get("lifecycle_updated_utc")
+        if state_changed or not updated_utc:
+            updated_utc = now_utc
+
+        closed_utc = event.get("closed_utc")
+        if new_state == "CLOSED":
+            if not closed_utc:
+                closed_utc = now_utc
+        else:
+            closed_utc = None
+
+        con.execute(
+            """
+            UPDATE events
+            SET status=?,
+                lifecycle_state=?,
+                lifecycle_reason=?,
+                lifecycle_updated_utc=?,
+                inactive_hours=?,
+                closed_utc=?
+            WHERE event_id=?
+            """,
+            (
+                new_state.lower(),
+                new_state,
+                result["lifecycle_reason"],
+                updated_utc,
+                result["inactive_hours"],
+                closed_utc,
+                event["event_id"],
+            ),
+        )
+
+        if state_changed:
+            changed_ids.append(event["event_id"])
+
+    return changed_ids
+
 
 def set_card_path(con, event_id: str, card_path: str) -> None:
     con.execute(

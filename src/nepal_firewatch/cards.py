@@ -375,6 +375,7 @@ def make_card(
 
     rows = [
         ("EVENT", str(event.get("event_id") or "—")),
+        ("LIFECYCLE", str(event.get("lifecycle_state") or "NEW")),
         ("FIRST DETECTED", first_seen),
         ("LAST DETECTED", last_seen),
         ("DETECTIONS / OVERPASSES", f"{detection_count} / {overpass_count}"),

@@ -16,6 +16,12 @@ class Settings:
     cluster_km: float = float(os.getenv("NFW_CLUSTER_KM", "3.0"))
     cluster_hours: float = float(os.getenv("NFW_CLUSTER_HOURS", "12"))
     min_confidence: str = os.getenv("NFW_MIN_CONFIDENCE", "nominal").lower()
+    lifecycle_quiet_hours: float = float(os.getenv("NFW_LIFECYCLE_QUIET_HOURS", "8"))
+    lifecycle_closed_hours: float = float(os.getenv("NFW_LIFECYCLE_CLOSED_HOURS", "24"))
+    lifecycle_active_overpasses: int = int(os.getenv("NFW_LIFECYCLE_ACTIVE_OVERPASSES", "2"))
+    lifecycle_persistent_overpasses: int = int(os.getenv("NFW_LIFECYCLE_PERSISTENT_OVERPASSES", "3"))
+    lifecycle_active_duration_hours: float = float(os.getenv("NFW_LIFECYCLE_ACTIVE_DURATION_HOURS", "1"))
+    lifecycle_persistent_duration_hours: float = float(os.getenv("NFW_LIFECYCLE_PERSISTENT_DURATION_HOURS", "12"))
     db_path: Path = ROOT / os.getenv("NFW_DB_PATH", "data/firewatch.sqlite")
     boundary_path: Path = ROOT / "data/cache/nepal_local_levels_oknp.geojson"
     boundary_url: str = "https://raw.githubusercontent.com/openknowledgenp/localboundaries/gh-pages/public/data/local-level/nepal.geojson"

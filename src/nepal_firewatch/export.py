@@ -46,9 +46,16 @@ def export_all(con, out_dir: Path) -> None:
         encoding="utf-8",
     )
 
+    lifecycle_counts = {}
+    for r in events:
+        state = str(r["lifecycle_state"] or "NEW").upper()
+        lifecycle_counts[state] = lifecycle_counts.get(state, 0) + 1
+    open_event_count = sum(n for state, n in lifecycle_counts.items() if state != "CLOSED")
     summary = {
         "generated_utc": utcnow_iso(),
         "event_count": len(event_features),
+        "open_event_count": open_event_count,
+        "lifecycle_counts": lifecycle_counts,
         "detection_count": len(det_features),
         "latest_event_utc": events[0]["last_seen_utc"] if events else None,
     }
@@ -75,6 +82,9 @@ def write_health(
     database_events = con.execute(
         "SELECT COUNT(*) FROM events"
     ).fetchone()[0]
+    database_open_events = con.execute(
+        "SELECT COUNT(*) FROM events WHERE lifecycle_state != 'CLOSED'"
+    ).fetchone()[0]
 
     health = {
         "last_run_utc": utcnow_iso(),
@@ -85,6 +95,7 @@ def write_health(
         "new_events": new_events,
         "database_detections": database_detections,
         "database_events": database_events,
+        "database_open_events": database_open_events,
     }
 
     (out_dir / "health.json").write_text(
