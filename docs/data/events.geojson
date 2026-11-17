@@ -6,6 +6,328 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          81.22501,
+          28.44885
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261117-014",
+        "first_seen_utc": "2026-11-17T07:33:00+00:00",
+        "last_seen_utc": "2026-11-17T07:33:00+00:00",
+        "max_frp": 4.2,
+        "detection_count": 1,
+        "province": "Lumbini",
+        "district": "Bardiya",
+        "local_name": "Bardiya National Park",
+        "local_type": "National Park",
+        "status": "active",
+        "card_path": "cards/NFW-20261117-014.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          82.88154,
+          27.5814
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261117-013",
+        "first_seen_utc": "2026-11-17T07:33:00+00:00",
+        "last_seen_utc": "2026-11-17T07:33:00+00:00",
+        "max_frp": 1.61,
+        "detection_count": 1,
+        "province": "Lumbini",
+        "district": "Kapilbastu",
+        "local_name": "Shivaraj",
+        "local_type": "Nagarpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261117-013.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.10201,
+          27.55527
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261117-012",
+        "first_seen_utc": "2026-11-17T07:33:00+00:00",
+        "last_seen_utc": "2026-11-17T07:33:00+00:00",
+        "max_frp": 2.17,
+        "detection_count": 1,
+        "province": "Lumbini",
+        "district": "Kapilbastu",
+        "local_name": "Kapilbastu",
+        "local_type": "Nagarpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261117-012.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.19272,
+          27.54032
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261117-011",
+        "first_seen_utc": "2026-11-17T07:33:00+00:00",
+        "last_seen_utc": "2026-11-17T07:33:00+00:00",
+        "max_frp": 2.11,
+        "detection_count": 1,
+        "province": "Lumbini",
+        "district": "Kapilbastu",
+        "local_name": "Suddhodhan",
+        "local_type": "Gaunpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261117-011.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.31289,
+          27.53246
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261117-010",
+        "first_seen_utc": "2026-11-17T07:33:00+00:00",
+        "last_seen_utc": "2026-11-17T07:33:00+00:00",
+        "max_frp": 2.52,
+        "detection_count": 1,
+        "province": "Lumbini",
+        "district": "Rupandehi",
+        "local_name": "Mayadevi",
+        "local_type": "Gaunpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261117-010.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.25251,
+          27.50788
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261117-009",
+        "first_seen_utc": "2026-11-17T07:33:00+00:00",
+        "last_seen_utc": "2026-11-17T07:33:00+00:00",
+        "max_frp": 2.27,
+        "detection_count": 1,
+        "province": "Lumbini",
+        "district": "Rupandehi",
+        "local_name": "Lumbini Sanskritik",
+        "local_type": "Nagarpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261117-009.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.72277,
+          27.5033
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261117-008",
+        "first_seen_utc": "2026-11-17T07:33:00+00:00",
+        "last_seen_utc": "2026-11-17T07:33:00+00:00",
+        "max_frp": 2.8,
+        "detection_count": 1,
+        "province": "Lumbini",
+        "district": "Nawalparasi_W",
+        "local_name": "Sarawal",
+        "local_type": "Gaunpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261117-008.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.63725500000001,
+          27.504705
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261117-007",
+        "first_seen_utc": "2026-11-17T07:33:00+00:00",
+        "last_seen_utc": "2026-11-17T07:33:00+00:00",
+        "max_frp": 2.04,
+        "detection_count": 2,
+        "province": "Lumbini",
+        "district": "Nawalparasi_W",
+        "local_name": "Ramgram",
+        "local_type": "Nagarpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261117-007.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.48058,
+          27.49415
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261117-006",
+        "first_seen_utc": "2026-11-17T07:33:00+00:00",
+        "last_seen_utc": "2026-11-17T07:33:00+00:00",
+        "max_frp": 2.25,
+        "detection_count": 1,
+        "province": "Lumbini",
+        "district": "Rupandehi",
+        "local_name": "Rohini",
+        "local_type": "Gaunpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261117-006.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.33614,
+          27.45906
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261117-005",
+        "first_seen_utc": "2026-11-17T07:33:00+00:00",
+        "last_seen_utc": "2026-11-17T07:33:00+00:00",
+        "max_frp": 2.81,
+        "detection_count": 1,
+        "province": "Lumbini",
+        "district": "Rupandehi",
+        "local_name": "Mayadevi",
+        "local_type": "Gaunpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261117-005.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.67216333333333,
+          27.46088333333333
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261117-004",
+        "first_seen_utc": "2026-11-17T07:33:00+00:00",
+        "last_seen_utc": "2026-11-17T07:33:00+00:00",
+        "max_frp": 6.31,
+        "detection_count": 3,
+        "province": "Lumbini",
+        "district": "Nawalparasi_W",
+        "local_name": "Palhi Nandan",
+        "local_type": "Gaunpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261117-004.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.23746,
+          27.44935
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261117-003",
+        "first_seen_utc": "2026-11-17T07:33:00+00:00",
+        "last_seen_utc": "2026-11-17T07:33:00+00:00",
+        "max_frp": 2.35,
+        "detection_count": 1,
+        "province": "Lumbini",
+        "district": "Rupandehi",
+        "local_name": "Lumbini Sanskritik",
+        "local_type": "Nagarpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261117-003.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          84.7469,
+          27.20121
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261117-002",
+        "first_seen_utc": "2026-11-17T07:33:00+00:00",
+        "last_seen_utc": "2026-11-17T07:33:00+00:00",
+        "max_frp": 13.67,
+        "detection_count": 1,
+        "province": "Madhesh",
+        "district": "Parsa",
+        "local_name": "Jirabhawani",
+        "local_type": "Gaunpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261117-002.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.14518000000001,
+          27.514225
+        ]
+      },
+      "properties": {
+        "event_id": "NFW-20261117-001",
+        "first_seen_utc": "2026-11-17T06:33:00+00:00",
+        "last_seen_utc": "2026-11-17T06:33:00+00:00",
+        "max_frp": 4.98,
+        "detection_count": 2,
+        "province": "Lumbini",
+        "district": "Kapilbastu",
+        "local_name": "Mayadevi",
+        "local_type": "Gaunpalika",
+        "status": "active",
+        "card_path": "cards/NFW-20261117-001.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           82.34449000000001,
           29.597695555555553
         ]
