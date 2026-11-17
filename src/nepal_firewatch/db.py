@@ -33,6 +33,14 @@ CREATE TABLE IF NOT EXISTS events (
     lifecycle_updated_utc TEXT,
     inactive_hours REAL NOT NULL DEFAULT 0.0,
     closed_utc TEXT,
+    sentinel2_status TEXT NOT NULL DEFAULT 'not_checked',
+    sentinel2_path TEXT,
+    sentinel2_scene_id TEXT,
+    sentinel2_datetime_utc TEXT,
+    sentinel2_cloud_cover REAL,
+    sentinel2_source_url TEXT,
+    sentinel2_checked_utc TEXT,
+    sentinel2_error TEXT NOT NULL DEFAULT '',
     card_path TEXT,
     evidence_score INTEGER NOT NULL DEFAULT 0,
     confidence_class TEXT NOT NULL DEFAULT 'anomaly',
@@ -103,6 +111,17 @@ EVENT_LIFECYCLE_COLUMNS = {
     "closed_utc": "TEXT",
 }
 
+EVENT_SENTINEL2_COLUMNS = {
+    "sentinel2_status": "TEXT NOT NULL DEFAULT 'not_checked'",
+    "sentinel2_path": "TEXT",
+    "sentinel2_scene_id": "TEXT",
+    "sentinel2_datetime_utc": "TEXT",
+    "sentinel2_cloud_cover": "REAL",
+    "sentinel2_source_url": "TEXT",
+    "sentinel2_checked_utc": "TEXT",
+    "sentinel2_error": "TEXT NOT NULL DEFAULT ''",
+}
+
 def _event_columns(con: sqlite3.Connection) -> set[str]:
     return {row[1] for row in con.execute("PRAGMA table_info(events)").fetchall()}
 
@@ -131,6 +150,15 @@ def _migrate_event_lifecycle_columns(con: sqlite3.Connection) -> bool:
     existing = _event_columns(con)
     changed = False
     for name, sql_type in EVENT_LIFECYCLE_COLUMNS.items():
+        if name not in existing:
+            con.execute(f"ALTER TABLE events ADD COLUMN {name} {sql_type}")
+            changed = True
+    return changed
+
+def _migrate_event_sentinel2_columns(con: sqlite3.Connection) -> bool:
+    existing = _event_columns(con)
+    changed = False
+    for name, sql_type in EVENT_SENTINEL2_COLUMNS.items():
         if name not in existing:
             con.execute(f"ALTER TABLE events ADD COLUMN {name} {sql_type}")
             changed = True
@@ -183,6 +211,7 @@ def connect(path: Path) -> sqlite3.Connection:
     migrated = _migrate_event_confidence_columns(con)
     _migrate_event_ward_columns(con)
     _migrate_event_lifecycle_columns(con)
+    _migrate_event_sentinel2_columns(con)
     if migrated:
         # One-time classification of all events already stored in the v0.1 database.
         _backfill_confidence(con)
@@ -357,6 +386,28 @@ def update_all_lifecycles(
             changed_ids.append(event["event_id"])
 
     return changed_ids
+
+
+def set_event_sentinel2(con, event_id: str, result: dict) -> None:
+    con.execute(
+        """
+        UPDATE events SET sentinel2_status=?, sentinel2_path=?,
+        sentinel2_scene_id=?, sentinel2_datetime_utc=?, sentinel2_cloud_cover=?,
+        sentinel2_source_url=?, sentinel2_checked_utc=?, sentinel2_error=?
+        WHERE event_id=?
+        """,
+        (
+            result.get("status") or "error",
+            result.get("path"),
+            result.get("scene_id"),
+            result.get("datetime_utc"),
+            result.get("cloud_cover"),
+            result.get("source_url"),
+            result.get("checked_utc"),
+            result.get("error") or "",
+            event_id,
+        ),
+    )
 
 
 def set_card_path(con, event_id: str, card_path: str) -> None:

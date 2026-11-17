@@ -145,6 +145,15 @@ async function load() {
     const score = p.evidence_score ?? 0;
     const satellites = p.satellite_count ?? 0;
     const duration = Number(p.duration_hours ?? 0).toFixed(1);
+    const s2Cloud = p.sentinel2_cloud_cover == null
+      ? 'cloud unknown'
+      : `${Number(p.sentinel2_cloud_cover).toFixed(0)}% scene cloud`;
+    const s2Popup = p.sentinel2_path
+      ? `<br><div class="sentinel-context"><a href="${esc(p.sentinel2_path)}" target="_blank"><img src="${esc(p.sentinel2_path)}" alt="Sentinel-2 context image"></a><small>Sentinel-2 context • ${esc(formatNpt(p.sentinel2_datetime_utc))} • ${esc(s2Cloud)}<br>Context only; not fire confirmation.</small></div>`
+      : '';
+    const s2Sidebar = p.sentinel2_path
+      ? `<br><a href="${esc(p.sentinel2_path)}" target="_blank">Open Sentinel-2 context</a>`
+      : '';
 
     marker.bindPopup(
       `<b>${esc(p.event_id)}</b><br>` +
@@ -156,7 +165,8 @@ async function load() {
       `Satellites: ${esc(satellites)}<br>` +
       `Duration: ${esc(duration)} h<br>` +
       `Max FRP: ${esc(p.max_frp ?? '—')} MW` +
-      `${p.card_path ? `<br><a href="${esc(p.card_path)}" target="_blank">Alert card</a>` : ''}`
+      `${p.card_path ? `<br><a href="${esc(p.card_path)}" target="_blank">Alert card</a>` : ''}` +
+      `${s2Popup}`
     );
 
     const div = document.createElement('div');
@@ -168,7 +178,8 @@ async function load() {
       `<small>${esc(loc)}</small><br>` +
       `<small>${esc(formatNpt(p.last_seen_utc))}</small><br>` +
       `<small>Evidence ${esc(score)} • ${esc(p.detection_count)} detections • ${esc(satellites)} satellite(s)</small><br>` +
-      `${p.card_path ? `<a href="${esc(p.card_path)}" target="_blank">Open alert card</a>` : ''}`;
+      `${p.card_path ? `<a href="${esc(p.card_path)}" target="_blank">Open alert card</a>` : ''}` +
+      `${s2Sidebar}`;
     box.appendChild(div);
   });
 }

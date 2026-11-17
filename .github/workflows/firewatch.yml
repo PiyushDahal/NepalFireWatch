@@ -49,7 +49,7 @@ jobs:
           git config user.name "nepal-firewatch-bot"
           git config user.email "actions@users.noreply.github.com"
 
-          git add data/firewatch.sqlite docs/data docs/cards
+          git add data/firewatch.sqlite docs/data docs/cards docs/event_imagery
 
           git diff --cached --quiet || git commit -m "Update Nepal fire detections"
 

@@ -7,6 +7,7 @@ from .ward import BipadWardResolver
 from . import db
 from .events import ingest
 from .cards import make_card
+from .sentinel2 import build_context, needs_check
 from .export import export_all, write_health
 from .utils import ensure_dirs
 
@@ -43,7 +44,7 @@ def _event_detections(con, event_id: str) -> list[dict]:
 
 def run_pipeline(demo: bool = False) -> dict:
     s = SETTINGS
-    ensure_dirs(s.db_path.parent, s.cards_dir, s.map_data_dir)
+    ensure_dirs(s.db_path.parent, s.cards_dir, s.map_data_dir, s.sentinel2_dir)
 
     if demo:
         raw = load_demo(s.demo_csv)
@@ -93,6 +94,43 @@ def run_pipeline(demo: bool = False) -> dict:
             make_card(event, detections, s.docs_dir / rel, boundary_path=boundary_path)
             db.set_card_path(con, event_id, rel)
 
+        sentinel2_checked = 0
+        sentinel2_available = 0
+        sentinel2_errors = 0
+        if not demo and s.sentinel2_enabled:
+            force_ids = set(card_event_ids)
+            rows = [dict(r) for r in con.execute(
+                "SELECT * FROM events ORDER BY last_seen_utc DESC"
+            ).fetchall()]
+            for event in rows:
+                if sentinel2_checked >= s.sentinel2_max_events_per_run:
+                    break
+                event_id = event["event_id"]
+                if not needs_check(
+                    event,
+                    retry_hours=s.sentinel2_retry_hours,
+                    force=event_id in force_ids,
+                ):
+                    continue
+                result = build_context(
+                    event,
+                    s.sentinel2_dir / f"{event_id}.jpg",
+                    stac_url=s.sentinel2_stac_url,
+                    collection=s.sentinel2_collection,
+                    days_before=s.sentinel2_days_before,
+                    days_after=s.sentinel2_days_after,
+                    max_cloud_cover=s.sentinel2_max_cloud,
+                    context_km=s.sentinel2_context_km,
+                    image_size=s.sentinel2_image_size,
+                )
+                if result.get("status") == "available":
+                    result["path"] = f"event_imagery/{event_id}.jpg"
+                    sentinel2_available += 1
+                elif result.get("status") == "error":
+                    sentinel2_errors += 1
+                db.set_event_sentinel2(con, event_id, result)
+                sentinel2_checked += 1
+
         db.record_run(con, fetched, new_detections, new_events, mode)
         con.commit()
 
@@ -112,5 +150,8 @@ def run_pipeline(demo: bool = False) -> dict:
         "fetched": fetched,
         "new_detections": new_detections,
         "new_events": new_events,
+        "sentinel2_checked": sentinel2_checked,
+        "sentinel2_available": sentinel2_available,
+        "sentinel2_errors": sentinel2_errors,
         "health": health,
     }
