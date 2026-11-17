@@ -1,0 +1,10 @@
+{
+  "source_name": "Open Knowledge Nepal localboundaries",
+  "source_repository": "https://github.com/openknowledgenp/localboundaries",
+  "source_url": "https://raw.githubusercontent.com/openknowledgenp/localboundaries/gh-pages/public/data/local-level/nepal.geojson",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "downloaded_utc": "2026-11-13T20:21:39.493878+00:00",
+  "feature_count": 777,
+  "notes": "Properties normalized for Nepal FireWatch. Geometry retained from source GeoJSON."
+}

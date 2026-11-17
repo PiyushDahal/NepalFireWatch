@@ -1,1 +1,85 @@
-html,body{margin:0;height:100%;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#11151a;color:#f5f7fa}header{height:64px;box-sizing:border-box;padding:10px 18px;background:#1b2026;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #343b44}header b{font-size:22px}header span{display:block;color:#aeb7c2;font-size:12px;margin-top:2px}#status{font-size:13px;color:#f0a14b}main{display:grid;grid-template-columns:1fr 340px;height:calc(100% - 64px)}#map{height:100%}aside{overflow:auto;padding:16px;background:#171b20;border-left:1px solid #343b44}aside h2{margin-top:0}.event{background:#222830;border:1px solid #353d47;border-radius:12px;padding:12px;margin:10px 0}.event b{display:block}.event small{color:#aeb7c2}.event a{color:#ff9f43;text-decoration:none}.disclaimer{font-size:12px;color:#aeb7c2;line-height:1.4}@media(max-width:800px){main{grid-template-columns:1fr;grid-template-rows:60vh auto}aside{border-left:0;border-top:1px solid #343b44}}
+html,body{
+  margin:0;
+  height:100%;
+  font-family:system-ui,-apple-system,Segoe UI,sans-serif;
+  background:#11151a;
+  color:#f5f7fa
+}
+header{
+  min-height:72px;
+  box-sizing:border-box;
+  padding:10px 18px;
+  background:#1b2026;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  border-bottom:1px solid #343b44
+}
+.brand b{font-size:22px}
+.brand span{display:block;color:#aeb7c2;font-size:12px;margin-top:2px}
+.header-status{text-align:right;font-size:12px;line-height:1.45}
+#status{color:#aeb7c2}
+#last-check{color:#aeb7c2}
+.health{font-weight:700;font-size:13px}
+.health-ok{color:#56d364}
+.health-delay{color:#f0a14b}
+.health-stale{color:#ff6b6b}
+.health-unknown{color:#aeb7c2}
+main{display:grid;grid-template-columns:1fr 340px;height:calc(100% - 72px)}
+#map{height:100%}
+aside{overflow:auto;padding:16px;background:#171b20;border-left:1px solid #343b44}
+aside h2{margin-top:0}
+.event{background:#222830;border:1px solid #353d47;border-radius:12px;padding:12px;margin:10px 0}
+.event b{display:block}
+.event small{color:#aeb7c2}
+.event a{color:#ff9f43;text-decoration:none}
+.disclaimer{font-size:12px;color:#aeb7c2;line-height:1.4}
+@media(max-width:800px){
+  header{align-items:flex-start;flex-direction:column}
+  .header-status{text-align:left}
+  main{grid-template-columns:1fr;grid-template-rows:60vh auto;height:auto}
+  #map{min-height:60vh}
+  aside{border-left:0;border-top:1px solid #343b44}
+}
+
+
+/* Checkpoint 2: transparent event-evidence classification */
+.confidence-badge{
+  display:inline-block;
+  margin:6px 0;
+  padding:3px 8px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.01em;
+}
+.confidence-anomaly{background:#4b411a;color:#ffe28a;border:1px solid #806d25}
+.confidence-probable{background:#4a2e13;color:#ffc778;border:1px solid #8b5724}
+.confidence-high{background:#4b1f22;color:#ff9b9b;border:1px solid #8f3438}
+.event-anomaly{border-left:4px solid #f2cc60}
+.event-probable{border-left:4px solid #f0a14b}
+.event-high{border-left:4px solid #ff5d5d}
+.confidence-legend{
+  background:rgba(27,32,38,.95);
+  color:#f5f7fa;
+  border:1px solid #48515d;
+  border-radius:10px;
+  padding:9px 11px;
+  font-size:11px;
+  line-height:1.65;
+  box-shadow:0 1px 5px rgba(0,0,0,.35);
+}
+.confidence-legend b{display:block;margin-bottom:3px}
+.legend-dot{
+  display:inline-block;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  margin-right:6px;
+}
+.legend-anomaly{background:#f2cc60}
+.legend-probable{background:#f0a14b}
+.legend-high{background:#ff5d5d}
+.lifecycle-badge{display:inline-block;margin:5px 0 5px 6px;padding:2px 7px;border-radius:999px;font-size:10px;font-weight:700;letter-spacing:.04em;border:1px solid #56606c;color:#dce3ea}.lifecycle-new{border-color:#67b7dc;color:#8ed8f8}.lifecycle-active{border-color:#ffb454;color:#ffbf70}.lifecycle-persistent{border-color:#ff6b6b;color:#ff8585}.lifecycle-quiet{border-color:#9099a4;color:#b5bdc7}.lifecycle-closed{border-color:#666d76;color:#8d959f}
+.sentinel-context{margin-top:8px;max-width:300px}.sentinel-context img{display:block;width:100%;max-width:300px;border-radius:7px;border:1px solid #4c5560;margin-bottom:4px}.sentinel-context small{display:block;line-height:1.25;color:#b7c0ca}
