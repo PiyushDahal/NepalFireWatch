@@ -4,6 +4,29 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© OpenStreetMap'
 }).addTo(map);
 
+const CLOSED_VISIBLE_HOURS = 24;
+
+function closedAgeHours(p, nowMs = Date.now()) {
+  const lifecycle = String(p.lifecycle_state || 'NEW').toUpperCase();
+  if (lifecycle !== 'CLOSED') return 0;
+
+  // Keep a CLOSED event prominent for a full 24 hours after closure.
+  // Fall back to last_seen_utc for legacy records without closed_utc.
+  const reference = p.closed_utc || p.last_seen_utc;
+  if (!reference) return 0;
+
+  const closedMs = new Date(reference).getTime();
+  if (!Number.isFinite(closedMs)) return 0;
+  return Math.max(0, (nowMs - closedMs) / 3600000);
+}
+
+function isHistoricalClosed(p, nowMs = Date.now()) {
+  return (
+    String(p.lifecycle_state || 'NEW').toUpperCase() === 'CLOSED' &&
+    closedAgeHours(p, nowMs) > CLOSED_VISIBLE_HOURS
+  );
+}
+
 function esc(s) {
   return String(s ?? '').replace(/[&<>"']/g, m => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
@@ -124,8 +147,13 @@ async function load() {
   const box = document.getElementById('events');
   box.innerHTML = '';
 
+  const historicalMarkers = [];
+  const historicalCards = [];
+  let hiddenHistoricalCount = 0;
+
   e.features.forEach(f => {
     const p = f.properties;
+    const historical = isHistoricalClosed(p);
     const [lon, lat] = f.geometry.coordinates;
     const vis = eventVisual(p);
 
@@ -135,7 +163,14 @@ async function load() {
       fillColor: vis.fill,
       fillOpacity: .9,
       weight: 2
-    }).addTo(map);
+    });
+
+    if (historical) {
+      historicalMarkers.push(marker);
+      hiddenHistoricalCount += 1;
+    } else {
+      marker.addTo(map);
+    }
 
     const loc = [p.local_name, p.district, p.province]
       .filter(Boolean)
@@ -180,8 +215,50 @@ async function load() {
       `<small>Evidence ${esc(score)} • ${esc(p.detection_count)} detections • ${esc(satellites)} satellite(s)</small><br>` +
       `${p.card_path ? `<a href="${esc(p.card_path)}" target="_blank">Open alert card</a>` : ''}` +
       `${s2Sidebar}`;
-    box.appendChild(div);
+    if (historical) {
+      div.classList.add('event-historical');
+      historicalCards.push(div);
+    } else {
+      box.appendChild(div);
+    }
   });
+
+  const toggle = document.getElementById('history-toggle');
+  const historyCount = document.getElementById('history-count');
+
+  function setHistoricalVisibility(show) {
+    historicalMarkers.forEach(marker => {
+      if (show) {
+        if (!map.hasLayer(marker)) marker.addTo(map);
+      } else if (map.hasLayer(marker)) {
+        map.removeLayer(marker);
+      }
+    });
+
+    historicalCards.forEach(card => {
+      if (show) {
+        if (!card.isConnected) box.appendChild(card);
+      } else {
+        card.remove();
+      }
+    });
+
+    if (show) {
+      historyCount.textContent =
+        `Showing ${hiddenHistoricalCount} historical CLOSED event${hiddenHistoricalCount === 1 ? '' : 's'}.`;
+    } else if (hiddenHistoricalCount > 0) {
+      historyCount.textContent =
+        `${hiddenHistoricalCount} older CLOSED event${hiddenHistoricalCount === 1 ? '' : 's'} hidden.`;
+    } else {
+      historyCount.textContent = 'No older CLOSED events hidden.';
+    }
+  }
+
+  toggle.checked = false;
+  toggle.addEventListener('change', () => {
+    setHistoricalVisibility(toggle.checked);
+  });
+  setHistoricalVisibility(false);
 }
 
 load().catch(err => {
