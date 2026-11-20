@@ -1,11 +1,11 @@
 {
-  "last_run_utc": "2026-11-20T18:00:51+00:00",
+  "last_run_utc": "2026-11-20T23:57:27+00:00",
   "status": "success",
   "mode": "live",
-  "firms_records_fetched": 353,
-  "new_detections": 31,
-  "new_events": 25,
-  "database_detections": 223,
-  "database_events": 168,
-  "database_open_events": 25
+  "firms_records_fetched": 362,
+  "new_detections": 4,
+  "new_events": 2,
+  "database_detections": 227,
+  "database_events": 170,
+  "database_open_events": 27
 }

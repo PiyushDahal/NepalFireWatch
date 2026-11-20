@@ -6,6 +6,122 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          84.89186,
+          27.02327
+        ]
+      },
+      "properties": {
+        "detection_id": "c7b56d707a0b14be5a54c1e01363b89d1b5d0451",
+        "event_id": "NFW-20261120-026",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-20T20:40:00+00:00",
+        "observed_npt": "2026-11-21T02:25:00+05:45",
+        "confidence": "nominal",
+        "frp": 1.95,
+        "daynight": "N",
+        "bright_ti4": 310.42,
+        "bright_ti5": 289.71,
+        "province": "Madhesh",
+        "district": "Parsa",
+        "local_name": "Birgunj",
+        "local_type": "Mahanagarpalika",
+        "inserted_utc": "2026-11-20T23:57:19+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          84.8893,
+          27.02601
+        ]
+      },
+      "properties": {
+        "detection_id": "9ba61ba008ca255603c8eb3421d9f32d54534875",
+        "event_id": "NFW-20261120-026",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-20T20:40:00+00:00",
+        "observed_npt": "2026-11-21T02:25:00+05:45",
+        "confidence": "nominal",
+        "frp": 1.31,
+        "daynight": "N",
+        "bright_ti4": 313.91,
+        "bright_ti5": 289.98,
+        "province": "Madhesh",
+        "district": "Parsa",
+        "local_name": "Birgunj",
+        "local_type": "Mahanagarpalika",
+        "inserted_utc": "2026-11-20T23:57:19+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          84.81258,
+          27.72621
+        ]
+      },
+      "properties": {
+        "detection_id": "5004711bd9561d4cf0d7cdd412fc0e8cc79552ea",
+        "event_id": "NFW-20261120-027",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-20T20:40:00+00:00",
+        "observed_npt": "2026-11-21T02:25:00+05:45",
+        "confidence": "nominal",
+        "frp": 0.42,
+        "daynight": "N",
+        "bright_ti4": 297.15,
+        "bright_ti5": 285.42,
+        "province": "Bagmati",
+        "district": "Dhading",
+        "local_name": "Benighat Rorang",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-20T23:57:19+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          84.89098,
+          27.02415
+        ]
+      },
+      "properties": {
+        "detection_id": "cb23d0aafdcb3535b9d7001697b34870973becd8",
+        "event_id": "NFW-20261120-026",
+        "source": "VIIRS_NOAA21_NRT",
+        "satellite": "N21",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-20T19:44:00+00:00",
+        "observed_npt": "2026-11-21T01:29:00+05:45",
+        "confidence": "nominal",
+        "frp": 3.59,
+        "daynight": "N",
+        "bright_ti4": 323.07,
+        "bright_ti5": 291.15,
+        "province": "Madhesh",
+        "district": "Parsa",
+        "local_name": "Birgunj",
+        "local_type": "Mahanagarpalika",
+        "inserted_utc": "2026-11-20T23:57:19+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           83.71071,
           27.4988
         ]
