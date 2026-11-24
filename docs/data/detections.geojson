@@ -6,6 +6,122 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          81.55639,
+          28.42478
+        ]
+      },
+      "properties": {
+        "detection_id": "5021d64c68f171eace2421ec25af4e43531757bc",
+        "event_id": "NFW-20261124-030",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-24T08:41:00+00:00",
+        "observed_npt": "2026-11-24T14:26:00+05:45",
+        "confidence": "nominal",
+        "frp": 18.39,
+        "daynight": "D",
+        "bright_ti4": 353.97,
+        "bright_ti5": 296.13,
+        "province": "Lumbini",
+        "district": "Bardiya",
+        "local_name": "Bardiya National Park",
+        "local_type": "National Park",
+        "inserted_utc": "2026-11-24T20:51:18+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.56219,
+          28.42513
+        ]
+      },
+      "properties": {
+        "detection_id": "c57fa21f178c68830948ebac2bf0da6e5f52b3fc",
+        "event_id": "NFW-20261124-030",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-24T08:41:00+00:00",
+        "observed_npt": "2026-11-24T14:26:00+05:45",
+        "confidence": "nominal",
+        "frp": 16.19,
+        "daynight": "D",
+        "bright_ti4": 348.74,
+        "bright_ti5": 292.5,
+        "province": "Lumbini",
+        "district": "Bardiya",
+        "local_name": "Bardiya National Park",
+        "local_type": "National Park",
+        "inserted_utc": "2026-11-24T20:51:18+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.55551,
+          28.42585
+        ]
+      },
+      "properties": {
+        "detection_id": "54fdaf4dbdc5094b10bb945a9aad37fce61de4ad",
+        "event_id": "NFW-20261124-030",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-24T08:41:00+00:00",
+        "observed_npt": "2026-11-24T14:26:00+05:45",
+        "confidence": "nominal",
+        "frp": 12.18,
+        "daynight": "D",
+        "bright_ti4": 351.19,
+        "bright_ti5": 294.87,
+        "province": "Lumbini",
+        "district": "Bardiya",
+        "local_name": "Bardiya National Park",
+        "local_type": "National Park",
+        "inserted_utc": "2026-11-24T20:51:18+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.56131,
+          28.42617
+        ]
+      },
+      "properties": {
+        "detection_id": "3f82b6897b4682a02fe12f728d6eb974eb114c9c",
+        "event_id": "NFW-20261124-030",
+        "source": "VIIRS_NOAA20_NRT",
+        "satellite": "N20",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-24T08:41:00+00:00",
+        "observed_npt": "2026-11-24T14:26:00+05:45",
+        "confidence": "high",
+        "frp": 12.18,
+        "daynight": "D",
+        "bright_ti4": 367.0,
+        "bright_ti5": 292.57,
+        "province": "Lumbini",
+        "district": "Bardiya",
+        "local_name": "Bardiya National Park",
+        "local_type": "National Park",
+        "inserted_utc": "2026-11-24T20:51:18+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           81.72757,
           28.03149
         ]
