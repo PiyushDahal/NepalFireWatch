@@ -6,6 +6,122 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          84.88184,
+          28.41765
+        ]
+      },
+      "properties": {
+        "detection_id": "524af7cb18a5dd13132f50a285f0eee7bcf09e53",
+        "event_id": "NFW-20261125-036",
+        "source": "VIIRS_NOAA21_NRT",
+        "satellite": "N21",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-25T19:51:00+00:00",
+        "observed_npt": "2026-11-26T01:36:00+05:45",
+        "confidence": "nominal",
+        "frp": 4.75,
+        "daynight": "N",
+        "bright_ti4": 336.76,
+        "bright_ti5": 280.73,
+        "province": "Gandaki",
+        "district": "Gorkha",
+        "local_name": "Chum Nubri",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-25T23:16:54+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          84.88657,
+          28.42074
+        ]
+      },
+      "properties": {
+        "detection_id": "2201eca6ed76ec443cd48e3c03a031302becf4f4",
+        "event_id": "NFW-20261125-036",
+        "source": "VIIRS_NOAA21_NRT",
+        "satellite": "N21",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-25T19:51:00+00:00",
+        "observed_npt": "2026-11-26T01:36:00+05:45",
+        "confidence": "nominal",
+        "frp": 8.13,
+        "daynight": "N",
+        "bright_ti4": 319.1,
+        "bright_ti5": 282.02,
+        "province": "Gandaki",
+        "district": "Gorkha",
+        "local_name": "Chum Nubri",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-25T23:16:54+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          84.88247,
+          28.42126
+        ]
+      },
+      "properties": {
+        "detection_id": "98e92f1dc8532f007809c277c79d67a7dcd73a5b",
+        "event_id": "NFW-20261125-036",
+        "source": "VIIRS_NOAA21_NRT",
+        "satellite": "N21",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-25T19:51:00+00:00",
+        "observed_npt": "2026-11-26T01:36:00+05:45",
+        "confidence": "nominal",
+        "frp": 8.08,
+        "daynight": "N",
+        "bright_ti4": 326.37,
+        "bright_ti5": 281.68,
+        "province": "Gandaki",
+        "district": "Gorkha",
+        "local_name": "Chum Nubri",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-25T23:16:54+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          82.35715,
+          29.60459
+        ]
+      },
+      "properties": {
+        "detection_id": "e9cf38f40e42444c030e5b34aa6571f864e2a0ba",
+        "event_id": "NFW-20261125-037",
+        "source": "VIIRS_NOAA21_NRT",
+        "satellite": "N21",
+        "instrument": "VIIRS",
+        "observed_utc": "2026-11-25T19:51:00+00:00",
+        "observed_npt": "2026-11-26T01:36:00+05:45",
+        "confidence": "nominal",
+        "frp": 2.12,
+        "daynight": "N",
+        "bright_ti4": 295.6,
+        "bright_ti5": 269.83,
+        "province": "Karnali",
+        "district": "Mugu",
+        "local_name": "Mugum Karmarong",
+        "local_type": "Gaunpalika",
+        "inserted_utc": "2026-11-25T23:16:54+00:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           83.44944,
           27.48373
         ]
