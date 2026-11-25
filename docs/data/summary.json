@@ -1,11 +1,12 @@
 {
-  "generated_utc": "2026-11-25T04:06:52+00:00",
-  "event_count": 316,
-  "open_event_count": 30,
+  "generated_utc": "2026-11-25T14:17:10+00:00",
+  "event_count": 351,
+  "open_event_count": 35,
   "lifecycle_counts": {
-    "QUIET": 30,
-    "CLOSED": 286
+    "NEW": 33,
+    "ACTIVE": 2,
+    "CLOSED": 316
   },
-  "detection_count": 444,
-  "latest_event_utc": "2026-11-24T08:41:00+00:00"
+  "detection_count": 489,
+  "latest_event_utc": "2026-11-25T08:22:00+00:00"
 }
